@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "rainfog",
+  "version": "${version}",
+  "name": "Eternal Rain",
+  "description": "Client-side only: the sky is always raining. Does not change the server's weather.",
+  "authors": ["you"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.example.rainfog.RainFogClient"]
+  },
+  "mixins": ["rainfog.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.19.0",
+    "minecraft": "~26.3",
+    "java": ">=25"
+  }
+}

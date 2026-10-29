@@ -1,0 +1,9 @@
+{
+  "required": true,
+  "package": "com.example.rainfog.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "WorldMixin"
+  ],
+  "injectors": { "defaultRequire": 1 }
+}
