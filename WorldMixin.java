@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 /**
- * Sadece ISTEMCI tarafindaki dunyada yagmur siddetini 1.0 dondurur.
+ * Sadece ISTEMCI tarafindaki dunyada yagmur siddetini ayarlanan degere sabitler.
  * Sunucu (ve tek oyuncuda dahili sunucu) dunyasi etkilenmez.
  * Iris/Unbound "rainStrength", yagmur sesi, gokyuzu kararmasi ve getRainLevel()
  * okuyan diger modlar bu degeri gorur.
@@ -19,7 +19,7 @@ public abstract class WorldMixin {
     private void rainfog$alwaysRain(float partialTick, CallbackInfoReturnable<Float> cir) {
         Level self = (Level) (Object) this;
         if (RainFogConfig.enabled && self.isClientSide() && self.dimension() == Level.OVERWORLD) {
-            cir.setReturnValue(1.0F);
+            cir.setReturnValue(RainFogConfig.rainIntensity);
         }
     }
 }

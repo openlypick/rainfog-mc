@@ -14,12 +14,13 @@ dependencies {
     implementation "net.fabricmc:fabric-loader:${project.loader_version}"
 }
 
-// Düz (klasörsüz) dosya düzeni: sadece bu dosyalar derlenir, repodaki eski dosyalar yok sayılır.
+// Düz (klasörsüz) dosya düzeni: sadece bu dosyalar derlenir, repodaki diğer dosyalar yok sayılır.
 sourceSets {
     main {
         java {
             srcDirs = ['.']
-            include 'RainFogClient.java', 'RainFogConfig.java', 'WorldMixin.java'
+            include 'RainFogClient.java', 'RainFogConfig.java', 'RainSlider.java',
+                    'WorldMixin.java', 'InventoryScreenMixin.java', 'ClockMixin.java', 'SoundMixin.java'
         }
         resources {
             srcDirs = ['.']
@@ -37,4 +38,5 @@ processResources {
 
 tasks.withType(JavaCompile).configureEach {
     options.release = 25
+    options.encoding = 'UTF-8'
 }

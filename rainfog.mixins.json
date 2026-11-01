@@ -3,7 +3,10 @@
   "package": "com.example.rainfog.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
-    "WorldMixin"
+    "WorldMixin",
+    "InventoryScreenMixin",
+    "ClockMixin",
+    "SoundMixin"
   ],
   "injectors": { "defaultRequire": 1 }
 }
